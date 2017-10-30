@@ -27,6 +27,7 @@ P.S.: Caso prefira, você pode fazer o download do projeto manualmente.
   echo $post->GetSQL();
   
   //UPDATE `Usuarios` SET `Nome` = NULL WHERE ID = 123
+  
   ?>
 ```
 
