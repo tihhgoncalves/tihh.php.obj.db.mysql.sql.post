@@ -8,7 +8,7 @@ Objeto de PHP que gera SQL (post) automaticamente.
 Para utilizar esse script, utilize o seguinte comando:
 
 ```
-  bower install https://github.com/tihhgoncalves/tihh.php.obj.db.mysql.sql.post.git --save
+  bower install tihh.php.obj.db.mysql.sql.post --save
 ```
 
 P.S.: Caso prefira, você pode fazer o download do projeto manualmente.

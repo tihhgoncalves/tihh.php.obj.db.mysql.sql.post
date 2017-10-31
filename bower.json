@@ -1,0 +1,21 @@
+{
+  "name": "tihh.php.obj.db.mysql.sql.post",
+  "homepage": "https://github.com/tihhgoncalves/tihh.php.obj.db.mysql.sql.post",
+  "authors": [
+    "Tihh Gonçalves <tiago@tiago.art.br>"
+  ],
+  "description": "Objeto de PHP que gera SQL (post) automaticamente.",
+  "main": "load.php",
+  "keywords": [
+    "mysql",
+    "sql",
+    "database",
+    "base",
+    "php"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "bower_components",
+    ".idea"
+  ]
+}
