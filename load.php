@@ -1,8 +1,14 @@
 <?
+
+/**
+ * Objeto de PHP que gera SQL (post) automaticamente.
+ *
+ * versão: 1.0
+ *
+ */
 class tihh_db_mysql_sql_post{
 
   private $fields = array();
-  private $files = array();
   private $table;
 
   public $id = -1;
@@ -24,48 +30,34 @@ class tihh_db_mysql_sql_post{
   public function AddFieldNumber($fieldName, $value){
 
     if($value == null)
-      $field = array($fieldName, "NULL");
-    else
-      $field = array($fieldName, number_format($value, 2, '.', ''));
+      $value = "NULL";
 
-    $this->fields[] = $field;
+    $this->fields[$fieldName] = $value;
 
   }
 
   public function AddFieldInteger($fieldName, $value){
-
-    //verifica se já foi setado este campo...
-    $this->verifyField($fieldName);
-
-    $field = array($fieldName, intval($value));
-    $this->fields[] = $field;
+    $value = intval($value);
+    $this->fields[$fieldName] = $value;
   }
 
   public function AddFieldBoolean($fieldName, $value){
-
-    //verifica se já foi setado este campo...
-    $this->verifyField($fieldName);
-
-    $field = array($fieldName, ($value)?"'Y'":"'N'");
-    $this->fields[] = $field;
+    $value = ($value)?"'Y'":"'N'";
+    $this->fields[$fieldName] = $value;
   }
 
   public function AddFieldDateTime($fieldName, $value){
-
-    //verifica se já foi setado este campo...
-    $this->verifyField($fieldName);
-
-    $this->AddFieldString($fieldName, $value);
+    $this->fields[$fieldName] = $value;
   }
 
   public function AddFieldDateTimeNow($fieldName){
-    $field = array($fieldName, "NOW()");
-    $this->fields[] = $field;
+    $value = "NOW()";
+    $this->fields[$fieldName] = $value;
   }
 
   public function AddFieldDateToday($fieldName){
-    $field = array($fieldName, "TODAY()");
-    $this->fields[] = $field;
+    $value = "TODAY()";
+    $this->fields[$fieldName] = $value;
   }
 
   public function GetSQL(){
