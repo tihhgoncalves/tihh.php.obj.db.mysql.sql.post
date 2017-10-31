@@ -18,7 +18,7 @@ P.S.: Caso prefira, você pode fazer o download do projeto manualmente.
 ```
   <?
   
-  require('bower_components/tihh.php.obj.db.mysql.post/load.php');
+  require('bower_components/tihh.php.obj.db.mysql.sql.post/load.php');
   
   $post = new tihh_db_mysql_sql_post('Usuarios');
   $post->id = 123;
